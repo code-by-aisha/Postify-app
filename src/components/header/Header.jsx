@@ -59,36 +59,40 @@ function Header() {
 
           {/* Nav items */}
           <ul
-            className={`list-unstyled m-0 align-items-center gap-5 ${
-              menuOpen ? "d-flex" : "d-none"
-            } d-md-flex flex-column flex-md-row  bg-opacity-50 p-3 p-md-0 rounded-lg`}
-            style={{
-              position: menuOpen ? "absolute" : "static",
-              top: menuOpen ? "100%" : "auto",
-              right: menuOpen ? 0 : "auto",
-            }}
-          >
-            {navItems.map((item) =>
-              item.active ? (
-                <li key={item.name} className="gap-3">
-                  <button
-                    onClick={() => {
-                      navigate(item.slug);
-                      setMenuOpen(false);
-                    }}
-                    className="btn btn-gradient px-4 py-2 fs-6 "
-                  >
-                    {item.name}
-                  </button>
-                </li>
-              ) : null
-            )}
-            {authStatus && (
-              <li className="">
-                <LogoutBtn onClick={() => setMenuOpen(false)} />
-              </li>
-            )}
-          </ul>
+  className={`list-unstyled m-0 align-items-center gap-3 
+    ${menuOpen ? "d-flex" : "d-none"} 
+    d-md-flex flex-column flex-md-row 
+    bg-dark bg-opacity-75 p-3 p-md-0 rounded`}
+  style={{
+    position: menuOpen ? "absolute" : "static",
+    top: menuOpen ? "100%" : "auto",
+    right: menuOpen ? 0 : "auto",
+    width: menuOpen ? "100%" : "auto", 
+    zIndex: 999,
+  }}
+>
+  {navItems.map((item) =>
+    item.active ? (
+      <li key={item.name}>
+        <button
+          onClick={() => {
+            navigate(item.slug);
+            setMenuOpen(false);
+          }}
+          className="btn btn-gradient px-4 py-2 fs-6 w-100 text-start text-md-center"
+        >
+          {item.name}
+        </button>
+      </li>
+    ) : null
+  )}
+  {authStatus && (
+    <li>
+      <LogoutBtn onClick={() => setMenuOpen(false)} />
+    </li>
+  )}
+</ul>
+
         </nav>
       </Container>
     </header>
