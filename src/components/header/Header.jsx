@@ -45,7 +45,7 @@ function Header() {
 
           {/* Hamburger toggler - only on small screens */}
           <button
-            className="btn btn-link text-light d-md-none"
+            className="btn w-100 my-2 btn-link text-light d-md-none"
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
           >

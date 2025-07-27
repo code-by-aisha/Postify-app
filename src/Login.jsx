@@ -84,7 +84,7 @@ function Login() {
             />
           </div>
 
-          <Button type="submit" className="w-100">
+          <Button type="submit" className="w-100 my-2">
             Login
           </Button>
         </form>

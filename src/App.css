@@ -47,6 +47,15 @@ header {
   padding: 10px 24px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+@media (max-width: 700px) {
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+  }
 }
 
 .btn-gradient:hover,
