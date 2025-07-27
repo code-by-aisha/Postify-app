@@ -62,7 +62,7 @@ function Header() {
   className={`list-unstyled m-0 align-items-center gap-3 
     ${menuOpen ? "d-flex" : "d-none"} 
     d-md-flex flex-column flex-md-row 
-    bg-dark bg-opacity-75 p-3 p-md-0 rounded`}
+     bg-opacity-75 p-3 p-md-0 rounded`}
   style={{
     position: menuOpen ? "absolute" : "static",
     top: menuOpen ? "100%" : "auto",
