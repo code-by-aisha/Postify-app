@@ -13,15 +13,14 @@ authService.logout().then(() => {
 }
 
 return (
-    <button
-      className="btn border-0 text-white fw-semibold px-4 py-2"
-      style={{
-        background: "linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%)",
-      }}
-      onClick={logoutHandler}
-    >
-      Logout
-    </button>
+ <button
+  className="btn nav-btn btn-gradient text-white fw-semibold px-4 py-2"
+  onClick={logoutHandler}
+>
+  Logout
+</button>
+
+
   );
    
 }

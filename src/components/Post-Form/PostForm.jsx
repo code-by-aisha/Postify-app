@@ -46,9 +46,8 @@ function PostForm({ post }) {
 
  useEffect(() => {
   if (!post?.featuredimage) return;
-
-  const previewUrl = appwriteService.getFilePreview(post.featuredimage);
-  setImageUrl(previewUrl?.href || "");
+  const previewUrl = appwriteService.getFileView(post.featuredimage);
+  setImageUrl(previewUrl || "");
 }, [post?.featuredimage]);
 
   
@@ -69,11 +68,13 @@ function PostForm({ post }) {
         }
       }
 
-      const payload = {
-        ...data,
-        featuredimage: fileId,
-        userid: userData?.$id || "",
-      };
+     const payload = {
+  ...data,
+  featuredimage: fileId,
+  userid: userData?.$id || "",
+};
+
+console.log("📦 Payload being saved to DB:", payload);
 
       const dbPost = post
         ? await appwriteService.updatePost(post.$id, payload)
@@ -93,7 +94,8 @@ function PostForm({ post }) {
         <h2 className="mb-4 text-center">
           {post ? "Edit Post" : "Create Post"}
         </h2>
-        <form onSubmit={handleSubmit(onSubmit)} className="row g-4">
+        <form onSubmit={handleSubmit(onSubmit ,(err) => console.log("❌ Form Errors:", err) )} className="row g-4">
+          
           {/* Title */}
           <div className="col-md-6">
             <Input
@@ -145,6 +147,7 @@ function PostForm({ post }) {
 
           {/* Existing Image Preview */}
           {post?.featuredimage && imageUrl && (
+           
             <div className="col-md-6 text-center">
               <img
                 src={imageUrl}

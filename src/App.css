@@ -1,4 +1,4 @@
- body {
+body {
   background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
   background-attachment: fixed;
   background-size: cover;
@@ -8,7 +8,6 @@
   padding: 0;
   min-height: 100vh;
   scroll-behavior: smooth;
- 
 }
 
 a {
@@ -28,15 +27,17 @@ a:hover {
   padding: 0 20px;
 }
 
-/* 👇 Glassy black navbar */
+/* 🔷 Glassy black navbar */
 header {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(12px);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+  position: relative;
 }
 
-/* 👇 Better gradient button */
+/* 🔶 Gradient button */
 .btn-gradient,
 .btn.btn-primary {
   background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
@@ -47,15 +48,6 @@ header {
   padding: 10px 24px;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
-}
-
-@media (max-width: 700px) {
-  .btn {
-    display: block;
-    width: 100%;
-    margin: 10px 0;
-  }
 }
 
 .btn-gradient:hover,
@@ -70,7 +62,70 @@ header {
   transform: translateY(1px);
 }
 
-/* 👇 Card glass effect */
+.nav-btn {
+  background: linear-gradient(135deg, #f6c90e, #6f42c1);
+  color: white;
+  border: none;
+  padding: 0.5rem 1.25rem;
+  border-radius: 10px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  margin: 0.4rem 0;
+  width: 100%;
+  text-align: center;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(135deg, #6f42c1, #f6c90e);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+}
+
+.nav-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(111, 66, 193, 0.4);
+}
+
+/* 🔻 Mobile Nav Styles */
+@media (max-width: 760px) {
+  nav ul {
+    display: flex !important;
+    flex-direction: column;
+    padding: 1rem;
+    position: absolute;
+    top: 100%;
+    right: 10px;
+    border-radius: 10px;
+    min-width: 220px;
+    width: auto;
+    z-index: 999;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  }
+
+  nav li {
+    width: 100%;
+    list-style: none;
+    margin: 0.3rem 0;
+  }
+
+  .navbar-btn {
+    display: block;
+    width: 100%;
+    margin: 8px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #FDBB2D, #3A1C71);
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+    font-weight: 600;
+  }
+
+  .navbar-btn:hover {
+    background: linear-gradient(135deg, #3A1C71, #FDBB2D);
+  }
+}
+
+/* 🔹 Card glass effect */
 .card {
   background: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(10px);
@@ -109,18 +164,17 @@ header + * {
 }
 
 .bg-light {
-  background-color: #f8f9fa !important; 
+  background-color: #f8f9fa !important;
 }
-
 
 .bg-editor {
   background-color: #f0f2f5;
   border: 1px solid #ddd;
 }
 
-
 .main-content {
   padding-top: 2rem;
 }
+
 
 

@@ -26,7 +26,7 @@ function Postcard({ post }) {
         style={{
           height: "180px",
           backgroundImage: post.featuredimage
-            ? `url(${appwriteService.getFilePreview(post.featuredimage)})`
+            ? `url(${appwriteService.getFileView(post.featuredimage)})`
             : "linear-gradient(135deg, #632dc996, #7b4bc9ff)",
           backgroundSize: "cover",
           backgroundPosition: "center",

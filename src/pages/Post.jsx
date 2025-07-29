@@ -40,7 +40,7 @@ export default function Post() {
         <div className="card border-0 shadow-lg mb-5 rounded-4 overflow-hidden d-flex ">
           <div className="position-relative "  style={{ paddingBottom: "2rem" }}>
             <img
-              src={appwriteService.getFilePreview(post.featuredimage)}
+              src={appwriteService.getFileView(post.featuredimage)}
               alt={post.title}
               className="w-100"
               style={{ height: "450px", objectFit: "cover", zIndex:"10", overflow:"visible" }}

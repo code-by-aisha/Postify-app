@@ -128,14 +128,14 @@ export class Service {
     }
   }
  
-getFilePreview(fileId) {
+getFileView(fileId) {
   try {
-   return this.storage.getFilePreview(conf.appwriteBucketId, fileId);
+    return this.storage.getFileView(conf.appwriteBucketId, fileId);
   } catch (error) {
-    console.error("❌ getFilePreview Error:", error);
-    
+    console.error("❌ getFileView Error:", error);
   }
 }
+
 
  
 

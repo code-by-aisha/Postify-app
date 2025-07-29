@@ -3,20 +3,12 @@ import appwriteService from "./Appwrite/config";
 import { Link } from "react-router-dom";
 
 function PostCard({ $id, title, featuredimage }) {
-  const preview = featuredimage
-    ? appwriteService.getFilePreview(featuredimage)
-    : null;
-
-  const src = preview
-    ? typeof preview === "string"
-      ? preview
-      : preview.href
-    : "";
+  const src = featuredimage ? appwriteService.getFileView(featuredimage) : "";
 
   return (
     <Link to={`/posts/${$id}`} className="text-decoration-none ">
       <div
-        className=" rounded-4 overflow-hidden shadow-sm border-0"
+        className="rounded-4 overflow-hidden shadow-sm border-0"
         style={{ transition: "transform 0.3s, box-shadow 0.3s" }}
         onMouseEnter={(e) => {
           e.currentTarget.style.transform = "translateY(-5px)";
@@ -44,6 +36,7 @@ function PostCard({ $id, title, featuredimage }) {
 }
 
 export default PostCard;
+
 
 
 

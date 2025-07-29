@@ -2,7 +2,7 @@
 
 function Container({ children }) {
     return (
-        <div className="container my-4">
+        <div className="container my-1">
             {children}
         </div>
     );

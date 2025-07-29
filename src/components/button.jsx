@@ -12,19 +12,7 @@ function Button({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`btn ${className}`}
-      style={{
-        padding: "10px 20px",
-        fontWeight: "600",
-        color: "white",
-        background: "linear-gradient(135deg, #FDBB2D 0%, #3A1C71 100%)",
-        border: "none",
-        borderRadius: "8px",
-        boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-        transition: "transform 0.2s ease, box-shadow 0.2s ease",
-        cursor: disabled ? "not-allowed" : "pointer",
-        opacity: disabled ? 0.6 : 1,
-      }}
+      className={`navbar-btn ${className}`}
       onMouseEnter={(e) => {
         if (!disabled) {
           e.currentTarget.style.transform = "translateY(-2px)";
