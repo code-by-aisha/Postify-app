@@ -41,48 +41,47 @@ const create = async (data) => {
         )}
 
         <form onSubmit={handleSubmit(create)} className="  d-grid gap-3 ">
-          <Input
-            className= "form-control "
-            label="Full Name"
-            type="text"
-            placeholder="Enter your name"
-            {...register("name", { required: "Name is required" })}
-             style={{ borderRadius: "8px" }}
-          />
-          {errors.name && <div className="text-danger small border-dark border-2">{errors.name.message}</div>}
+<Input
+  className="form-control border border-dark"
+  label="Full Name"
+  type="text"
+  placeholder="Enter your name"
+  {...register("name", { required: "Name is required" })}
+  style={{ borderRadius: "8px" }}
+/>
+{errors.name && <div className="text-danger small">{errors.name.message}</div>}
 
-          <Input
-            classname=" form-control border-dark border-1";
-            label="Email"
-            type="email"
-            placeholder="Enter your email"
-            {...register("email", {
-              required: "Email is required",
-              pattern: {
-                value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
-                message: "Enter a valid email",
-              },
-            })}
-             style={{ borderRadius: "8px" }}
-          />
-          {errors.email && <div className="text-danger small">{errors.email.message}</div>}
+<Input
+  className="form-control border border-dark"
+  label="Email"
+  type="email"
+  placeholder="Enter your email"
+  {...register("email", {
+    required: "Email is required",
+    pattern: {
+      value: /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/,
+      message: "Enter a valid email",
+    },
+  })}
+  style={{ borderRadius: "8px" }}
+/>
+{errors.email && <div className="text-danger small">{errors.email.message}</div>}
 
-          <Input
-            className=" form-control border-dark border-1";
-            label="Password"
-            type="password"
-            placeholder="Enter password"
-            {...register("password", {
-              required: "Password is required",
-             minLength: {
-              value: 8,
-              message: "Minimum 8 characters required",
-             }
-
-            })}
-             style={{ borderRadius: "8px" }}
-          />
-          {errors.password && <div className="text-danger small">{errors.password.message}</div>}
+<Input
+  className="form-control border border-dark"
+  label="Password"
+  type="password"
+  placeholder="Enter password"
+  {...register("password", {
+    required: "Password is required",
+    minLength: {
+      value: 8,
+      message: "Minimum 8 characters required",
+    },
+  })}
+  style={{ borderRadius: "8px" }}
+/>
+{errors.password && <div className="text-danger small">{errors.password.message}</div>}
 
           <Button
             type="submit"
