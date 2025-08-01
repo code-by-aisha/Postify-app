@@ -40,16 +40,17 @@ const create = async (data) => {
           <div className="alert alert-danger text-center py-2">{error}</div>
         )}
 
-        <form onSubmit={handleSubmit(create)} className="d-grid gap-3">
+        <form onSubmit={handleSubmit(create)} className="d-grid gap-3 ">
           <Input
             label="Full Name"
             type="text"
             placeholder="Enter your name"
             {...register("name", { required: "Name is required" })}
           />
-          {errors.name && <div className="text-danger small">{errors.name.message}</div>}
+          {errors.name && <div className="text-danger small border-dark border-2">{errors.name.message}</div>}
 
           <Input
+            classname="  border-dark border-2"
             label="Email"
             type="email"
             placeholder="Enter your email"
@@ -64,6 +65,7 @@ const create = async (data) => {
           {errors.email && <div className="text-danger small">{errors.email.message}</div>}
 
           <Input
+            className="border-dark border-2"
             label="Password"
             type="password"
             placeholder="Enter password"
