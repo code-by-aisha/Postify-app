@@ -11,7 +11,7 @@ function Footer() {
             <div className="mb-3">
               <Logo width="120px" />
             </div>
-            <p className=" small">&copy; 2023 DevUI. All rights reserved.</p>
+            <p className=" small">&copy; 2025 DevUI. All rights reserved.</p>
           </div>
           <div className="col-6 col-lg-2 mb-4 mb-lg-0">
             <h6 className="text-uppercase fw-bold mb-3">Company</h6>
