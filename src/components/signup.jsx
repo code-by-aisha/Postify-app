@@ -40,7 +40,7 @@ const create = async (data) => {
           <div className="alert alert-danger text-center py-2">{error}</div>
         )}
 
-        <form onSubmit={handleSubmit(create)} className=" form-control d-grid gap-3 ">
+        <form onSubmit={handleSubmit(create)} className="  d-grid gap-3 ">
           <Input
             className= "form-control "
             label="Full Name"
