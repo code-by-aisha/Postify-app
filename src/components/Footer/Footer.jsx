@@ -63,7 +63,7 @@ function Footer() {
           </div>
         </div>
         <hr className="border-secondary mt-4" />
-        <p className="text-center  small mb-0">Designed & Built with ❤️ by DevUI</p>
+        <p className="text-center  small mb-0">Designed & Built with ❤️ by Aisha Fayaz</p>
       </div>
     </footer>
   );
